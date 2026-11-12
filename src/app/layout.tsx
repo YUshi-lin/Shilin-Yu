@@ -143,6 +143,11 @@ export default function RootLayout({
           crossOrigin=""
         />
         <Script
+          data-goatcounter="https://shilinyu.goatcounter.com/count"
+          src="https://gc.zgo.at/count.js"
+          strategy="afterInteractive"
+        />
+        <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-HGRF2R6BS0"
           strategy="afterInteractive"
         />
