@@ -2,14 +2,14 @@
 [site]
 title = "Shilin Yu"
 description = "PhD student at Nanjing University."
-favicon = "/favicon.svg"
+favicon = "/Shilin-Yu/favicon.svg"
 last_updated = "November 12, 2026"
 
 [author]
 name = "Shilin Yu"
 title = "PhD Student"
 institution = "Nanjing University"
-avatar = "/bio.jpg"
+avatar = "/Shilin-Yu/bio.jpg"
 
 [social]
 email = "shilinyu@smail.nju.edu.cn"
