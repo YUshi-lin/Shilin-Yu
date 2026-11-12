@@ -45,8 +45,4 @@ type = "page"
 target = "services"
 href = "/services"
 
-[[navigation]]
-title = "简历"
-type = "page"
-target = "cv"
-href = "/cv"
+
