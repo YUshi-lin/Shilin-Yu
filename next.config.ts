@@ -3,6 +3,8 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   output: 'export',
   trailingSlash: true,
+  basePath: '/Shilin-Yu',
+  assetPrefix: '/Shilin-Yu',
   images: {
     unoptimized: true,
   },
