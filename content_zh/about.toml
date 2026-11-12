@@ -17,11 +17,10 @@ source = "bio.md"
 title = "关于我"
 
 [[sections]]
-id = "featured_publications"
-type = "publications"
-title = "精选论文"
-filter = "selected"
-limit = 5
+id = "education"
+type = "markdown"
+title = "教育背景"
+source = "education.md"
 
 [[sections]]
 id = "news"
