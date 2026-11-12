@@ -1,5 +1,7 @@
+
 'use client';
 
+import { useEffect, useState } from 'react';
 import { useLocaleStore } from '@/lib/stores/localeStore';
 import { useMessages } from '@/lib/i18n/useMessages';
 
@@ -9,15 +11,38 @@ interface FooterProps {
   defaultLocale?: string;
 }
 
-export default function Footer({ lastUpdated, lastUpdatedByLocale, defaultLocale = 'en' }: FooterProps) {
+export default function Footer({
+  lastUpdated,
+  lastUpdatedByLocale,
+  defaultLocale = 'en',
+}: FooterProps) {
   const locale = useLocaleStore((state) => state.locale);
   const messages = useMessages();
+  const [visitorCount, setVisitorCount] = useState<string | null>(null);
 
   const resolvedLastUpdated =
     lastUpdatedByLocale?.[locale] ||
     (defaultLocale ? lastUpdatedByLocale?.[defaultLocale] : undefined) ||
     lastUpdated ||
-    new Date().toLocaleDateString(locale || 'en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+    new Date().toLocaleDateString(locale || 'en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+    });
+
+  useEffect(() => {
+    fetch('https://shilinyu.goatcounter.com/counter/TOTAL.json')
+      .then((response) => {
+        if (!response.ok) throw new Error('Failed to load visitor count');
+        return response.json();
+      })
+      .then((data) => {
+        setVisitorCount(data.count);
+      })
+      .catch((error) => {
+        console.error('GoatCounter error:', error);
+      });
+  }, []);
 
   return (
     <footer className="border-t border-neutral-200/50 bg-neutral-50/50 dark:bg-neutral-900/50 dark:border-neutral-700/50">
@@ -26,12 +51,26 @@ export default function Footer({ lastUpdated, lastUpdatedByLocale, defaultLocale
           <p className="text-xs text-neutral-500">
             {messages.footer.lastUpdated}: {resolvedLastUpdated}
           </p>
+
           <p className="text-xs text-neutral-500 flex items-center">
-            <a href="https://github.com/xyjoey/PRISM" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://github.com/xyjoey/PRISM"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {messages.footer.builtWithPrism}
             </a>
             <span className="ml-2">🚀</span>
           </p>
+        </div>
+
+        <div className="mt-4 text-center text-xs text-neutral-500">
+          {locale === 'zh' ? '总访问量' : 'Total visits'}:
+          {' '}
+          <span className="font-semibold tabular-nums">
+            {visitorCount ?? 'Loading...'}
+          </span>
+          <span className="ml-1">· Powered by GoatCounter</span>
         </div>
       </div>
     </footer>
