@@ -6,7 +6,7 @@ last_updated = "2026年11月12日"
 
 [author]
 name = "禹世林"
-title = "博士生"
+title = "管理科学与工程 博士生"
 institution = "南京大学"
 
 [social]
@@ -16,7 +16,7 @@ location_details = []
 github = "https://github.com/YUshi-lin"
 
 [[navigation]]
-title = "关于我"
+title = "简介"
 type = "page"
 target = "about"
 href = "/"
