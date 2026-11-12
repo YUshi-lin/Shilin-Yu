@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import './globals.css';
 import Navigation from '@/components/layout/Navigation';
 import Footer from '@/components/layout/Footer';
@@ -141,6 +142,19 @@ export default function RootLayout({
           href="https://jialeliu.com/fonts/georgiab.woff2"
           crossOrigin=""
         />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-HGRF2R6BS0"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){window.dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-HGRF2R6BS0');
+          `}
+        </Script>
+        
         <script
           dangerouslySetInnerHTML={{
             __html: `
