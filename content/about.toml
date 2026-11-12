@@ -1,11 +1,13 @@
+
 type = "about"
 title = "About"
 
 [profile]
 research_interests = [
-  "Computational Physics",
-  "Mathematical Principles",
-  "Proof of Theorems"
+  "AI in E-commerce",
+  "Supply Chain Management",
+  "Return Policy",
+  "Game Theory"
 ]
 
 [[sections]]
@@ -26,4 +28,3 @@ id = "news"
 type = "list"
 title = "News"
 source = "news.toml"
-
