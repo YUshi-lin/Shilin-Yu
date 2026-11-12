@@ -1,5 +1,3 @@
-I am a PhD student at the School of Science, University of Example, advised by [Prof. Advisor One](https://example.com) and [Dr. Advisor Two](https://example.com).
+I am a PhD student at **Nanjing University**. My research interests lie in **AI in E-commerce, Supply Chain Management, Return Policy, and Game Theory**.
 
-Prior to this, I obtained a BSc degree with First Class Honours in Natural Science from the University of Example.
-
-My current research focuses on investigating the mathematical principles of natural philosophy.
+My research focuses on the strategic implications of artificial intelligence adoption in e-commerce and its interactions with return policy design. In particular, I investigate how AI technologies and different return policies influence consumer behavior, firms' strategic decisions, and supply chain performance. I am also interested in applying game-theoretic models to understand the economic and operational implications of emerging technologies in digital commerce.
