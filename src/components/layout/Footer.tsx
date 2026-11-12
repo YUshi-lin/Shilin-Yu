@@ -52,16 +52,7 @@ export default function Footer({
             {messages.footer.lastUpdated}: {resolvedLastUpdated}
           </p>
 
-          <p className="text-xs text-neutral-500 flex items-center">
-            <a
-              href="https://github.com/xyjoey/PRISM"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {messages.footer.builtWithPrism}
-            </a>
-            <span className="ml-2">🚀</span>
-          </p>
+          
         </div>
 
         <div className="mt-4 text-center text-xs text-neutral-500">
